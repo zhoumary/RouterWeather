@@ -1,0 +1,54 @@
+#localist {
+    text-align: center;
+    width: 100%;
+}
+
+#weatherlink {
+    text-align: center;
+    width: 100%;
+}
+
+#weatherlink {
+    width: 100px;
+    height: 100px;
+}
+
+.tempUnit {
+    content: "\2103";
+    align-items: flex-start;
+}
+
+#tempunitchoose {
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#tempunitchoose thead {
+    width: 100%;
+    text-align: center;
+}
+
+#tempunitchoose thead th {
+    width: 768px;
+}
+
+#unit {
+    text-align: left;
+}
+
+#addlocal {
+    text-align: right;
+}
+
+#add {
+    text-align: right;
+    align-items: flex-end;
+}
+
+#addlocation {
+    width: 20px;
+    height: 20px;
+}

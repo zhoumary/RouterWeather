@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'ChilankaRegular';
+    src: local('ChilankaRegular'),
+    url(./fonts/Chilanka-Regular.ttf) format('ttf');
+}
+
+html {
+    font-family: 'ChilankaRegular',
+    Arial,
+    sans-serif;
+    background: center / contain no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.body {
+    margin: 0px;
+    font-family: 'ChilankaRegular',
+    Arial,
+    sans-serif;
+}
+
+.tempUnit {
+    content: "\2103";
+}
+
+.currWeatherLine {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.weatherIcon {
+    width: 60px;
+    height: 60px;
+}
+
+hr {
+    color: white;
+    background-color: white;
+    height: 1px;
+}
+
+#overviewinfo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'ChilankaRegular',
+    Arial,
+    sans-serif;
+    font-weight: bold;
+    font-size: 66px;
+    font-size: 3.5vw;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.currweather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* styling title of time weather */
+#dateTemp {
+    table-layout: auto;
+    flex: auto;
+    width: 100%;
+    font-size: 20px;
+    font-size: 1.5vw;
+}
+
+#dateTemp thead th {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#dateTemp #weekDay {
+    text-align: left;
+    width: 200px;
+}
+
+#dateTemp #today {
+    text-align: left;
+}
+
+#dateTemp #highTemp {
+    text-align: right;
+}
+
+#dateTemp #lowTemp {
+    text-align: right;
+    width: 200px;
+}
+
+#dateTemp thead th {
+    padding: 5px;
+    letter-spacing: 1px;
+}
+
+/* styling time weather table */
+#weatherDetails {
+    table-layout: fixed;
+    text-align: center;
+    width: 100%;
+    font-family: 'ChilankaRegular',
+    Arial,
+    sans-serif;
+    font-size: 18px;
+    font-size: 1.2vw;
+}
+
+#weatherDetails td {
+    padding: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#weatherDetails th {
+    width: 33.33%;
+}
+
+#footerbefore {
+    margin: 15px;
+}
+
+#addLocation {
+    text-align: right;
+}
+
+#locationList {
+    width: 20px;
+    height: 20px;
+}
