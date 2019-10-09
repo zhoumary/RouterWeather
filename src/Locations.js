@@ -14,10 +14,12 @@ class Locations extends React.Component {
         super(props);
         this.state = {
             cStyle : null,
-            fStyle : null
+            fStyle : null,
+            locations: null
         };
         this.clickC = this.clickC.bind(this);
         this.clickF = this.clickF.bind(this);
+        // this.locations = this.locations.bind(this);
     }
 
 
@@ -49,6 +51,13 @@ class Locations extends React.Component {
         return (
              <div id="localist">
                 <footer>
+                    <div>
+                        <tabel id="locationsAdded">
+                            <tbody>
+
+                            </tbody>
+                        </tabel>
+                    </div>                        
                     <div>
                         <tabel id="tempunitchoose">
                             <thead>
