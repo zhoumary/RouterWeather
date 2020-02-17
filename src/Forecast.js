@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 
 const host = "https://api.openweathermap.org/data/2.5/";
-const apiKey = "a81a067d035dd84954e1a0d2c907e813";
+const apiKey = ""; // your api key
 class Forecast extends React.Component {
     getNextWeekDay(i) {
         const day = new Date();
