@@ -12,7 +12,7 @@ import SWorker from "simple-web-worker";
 // these components share state and can even live in different components
 const { InputFilter, FilterResults } = fuzzyFilterFactory();
 const host = "https://api.openweathermap.org/data/2.5/";
-const apiKey = "b1ef2003fa0d11a58f659cb9deab88b0";
+const apiKey = "";  // your api key
 
 class Search extends React.Component {
   // cilck ℃, which can highlighten ℃, also default temp unit
