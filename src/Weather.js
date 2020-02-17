@@ -16,7 +16,7 @@ import RainBack from './pics/RainBackground.gif';
 
 
 const host = "https://api.openweathermap.org/data/2.5/";
-const apiKey = "a81a067d035dd84954e1a0d2c907e813";
+const apiKey = "";  // your api key
 var columnCont = 1;
 class LocationOverview extends React.Component {
     render() {
