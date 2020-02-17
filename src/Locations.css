@@ -19,7 +19,6 @@
 }
 
 #tempunitchoose {
-    text-align: center;
     color: grey;
     font-size: 20px;
     display: flex;
@@ -28,27 +27,37 @@
 
 #tempunitchoose thead {
     width: 100%;
-    text-align: center;
 }
 
 #tempunitchoose thead th {
-    width: 768px;
+    /* width: 768px; */
+    width: 100%;
 }
 
 #unit {
-    text-align: left;
+    text-align: start;
 }
 
 #addlocal {
-    text-align: right;
+    text-align: end;
 }
 
 #add {
-    text-align: right;
+    text-align: end;
     align-items: flex-end;
 }
 
 #addlocation {
     width: 20px;
     height: 20px;
+}
+
+#weatherList {
+    width: 100%;
+    color: grey;
+    font-size: 20px;
+}
+
+#weatherList th {
+    width: 640px;
 }

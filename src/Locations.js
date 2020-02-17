@@ -13,43 +13,64 @@ class Locations extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cStyle : null,
-            fStyle : null,
-            locations: null
+            cStyle: null,
+            fStyle: null,
+            locations: null,
+            weatherList: []
         };
         this.clickC = this.clickC.bind(this);
         this.clickF = this.clickF.bind(this);
-        // this.locations = this.locations.bind(this);
     }
 
 
     clickC() {
         this.setState({
-            cStyle : {
+            cStyle: {
                 color: "black"
             },
             fStyle: {
                 color: "grey"
             }
         })
-        
+
     }
-    
+
     // cilck F, which can highlighten F
     clickF() {
         this.setState({
-            fStyle : {
+            fStyle: {
                 color: "black"
             },
             cStyle: {
                 color: "grey"
             }
-        })        
+        })
     }
-    
+
+    componentDidMount() {
+        this.getWeatherList();
+    }
+
+    getWeatherList = _ => {
+        fetch('http://localhost:4000/weather')
+            .then(response => response.json())
+            .then(response => {
+                this.setState({ weatherList: response.data })
+            })
+            .catch(err => console.log(err))
+    }
+
+    renderWeather = ({ id, time, city, temparature }) => <div key={id}>{city}</div>;
+
+    renderWeatherTable = ({ id, time, city, temparature }) => <tr key={id}><th>{time}</th><th>{city}</th><th>{temparature}</th></tr>;
+
     render() {
+        const weatherList = this.state.weatherList;
+        if (weatherList === null) {
+            return <div></div>
+        }
         return (
-             <div id="localist">
+            <div id="localist">
                 <footer>
                     <div>
                         <tabel id="locationsAdded">
@@ -57,14 +78,14 @@ class Locations extends React.Component {
 
                             </tbody>
                         </tabel>
-                    </div>                        
+                    </div>
                     <div>
                         <tabel id="tempunitchoose">
                             <thead>
                                 <th id="unit">
                                     <span class="tempUnit" onClick={this.clickC} style={this.state.cStyle}>&#8451;</span>
                                     <span class="tempUnit"> &frasl; </span>
-                                    <span class="tempUnit" onClick={this.clickF} style={this.state.fStyle}>&#8457;</span>  
+                                    <span class="tempUnit" onClick={this.clickF} style={this.state.fStyle}>&#8457;</span>
                                 </th>
                                 <th id="addlocal">
                                     <Link to="/Search/" id="add" onClick={() => window.location.refresh()}>
@@ -75,12 +96,19 @@ class Locations extends React.Component {
                         </tabel>
                     </div>
                     <div>
+                        <table id="weatherList">
+                            <tbody>
+                                {weatherList.map(this.renderWeatherTable)}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
                         <a href="https://weather.com/" id="weatherlink" target="_blank">
                             <img src={WeatherLink} id="weatherlink" />
                         </a>
                     </div>
                 </footer>
-             </div>
+            </div>
         );
     }
 }
